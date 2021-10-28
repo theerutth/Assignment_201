@@ -1,28 +1,28 @@
-class Products {
-    constructor (productId , productName , price , remainingAmount , image){
-        this._productId = productId;
-        this._productName = productName;
-        this._price = price;
-        this._remainingAmount = remainingAmount;
-        this._image = image;
-    }
-    get productId(){
-        return this._productId;
-    }
+import { products } from "./products.js";
 
-    get prodcutName(){
-        return this._productName;
-    }
-    
-    get price() {
-        return this._price;
-    }
+const productList = document.getElementById('productList');
 
-    get remainingAmount() {
-        return this._remainingAmount;
-    }
+products.forEach((value) => {
+    const product = document.createElement('div');
+    product.setAttribute('class', 'product');
 
-    get image() {
-        return this._image;
-    }
-}
+    const image = document.createElement('img');
+    const productId = document.createElement('p');
+    const productName = document.createElement('p');
+    const price = document.createElement('p');
+    const remainingAmount = document.createElement('p');
+
+    image.setAttribute('src', value.image);
+    productId.textContent = `ID : ${value.productId}`;
+    productName.textContent = `${value.productName}`
+    price.textContent = `Price : ${value.price}฿`
+    remainingAmount.textContent = `Stock : ${value.remainingAmount}`
+
+    product.appendChild(image);
+    product.appendChild(productId);
+    product.appendChild(productName);
+    product.appendChild(price);
+    product.appendChild(remainingAmount);
+
+    productList.appendChild(product);
+});
