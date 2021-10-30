@@ -12,4 +12,17 @@ products.forEach((value) => {
     const price = document.createElement('p');
     const remainingAmount = document.createElement('p');
 
+    image.setAttribute('src', value.image);
+    productId.textContent = `id:${value.productId}`;
+    productName.textContent = `name:${value.productName}`;
+    price.textContent = `price:${value.price}`;
+    remainingAmount.textContent = `stock:${value.remainingAmount}`;
+
+    product.appendChild(image);
+    product.appendChild(productId);
+    product.appendChild(productName);
+    product.appendChild(price);
+    product.appendChild(remainingAmount);
+
+    productList.appendChild(product);
 });
