@@ -25,6 +25,10 @@ class Product {
     get image() {
         return this._image;
     }
+
+    decreaseAmount() {
+        this._remainingAmount--;
+    }
 }
 
 export const products = [
@@ -35,4 +39,3 @@ export const products = [
     new Product('KB01', 'KEYCHRON K2 V.2', 3890.00, 25, './images/keyboard.jpg'),
     new Product('MP01', 'RAZER GAMING MOUSE PAD FIREFLY', 1160.00, 25, './images/mousepad.jpg')
 ]
-
