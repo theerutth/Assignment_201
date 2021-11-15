@@ -18,7 +18,9 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/57e66f923c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js" />
     <title>Document</title>
+
 </head>
 
 <body>
@@ -28,7 +30,6 @@
             <li><a href="#!">About</a></li>
             <li><a href="#!">Shop</a></li>
             <li><a href="#!">Contact</a></li>
-
             <button type="button" class="btn btn-dark position-relative">
                 <a href="cart/itemCart.html"><i class="fas fa-shopping-cart"></i><span
                         class="label label-danger"></span></a>
@@ -37,29 +38,42 @@
                     <span class="visually-hidden">in cart</span>
                 </span>
             </button>
+            <button class="btn btn-dark ml-2" id="hidebutton"><i class="fa fa-low-vision"
+                    aria-hidden="true"></i></button>
+            <div><label class="switch">
+                    <i class="fas fa-adjust"></i>
+                    <div>
+                        <input type="checkbox" />
+                        <span class="slider round"></span>
+                    </div>
+                </label></div>
 
-            <button class="btn btn-dark ml-2" id="hidebutton"><i class="fa fa-low-vision" aria-hidden="true"></i>
         </ul>
         <div class="container">
-            <div class="row height d-flex justify-content-center align-items-center">
-                <div class="col-md-8">
-                    <div class="search">
-                        <div class="search" id="search" style="display : flex">
-                            <i class="fas fa-search"></i>
-                            <form class="d-flex" data-isOpen="false">
-                                <div id="search-area" class="d-flex" data-isOpen="false"></div>
-                                <input type="text" class="form-control" id="search-bar" placeholder="Search">
-                            </form>
+            <div class="container">
+                <div class="row height d-flex justify-content-center align-items-center">
+                    <div class="col-md-8">
+                        <div class="search">
+                            <div class="search" id="search" style="display : flex">
+                                <i class="fas fa-search"></i>
+                                <form class="d-flex" data-isOpen="false">
+                                    <div id="search-area" class="d-flex" data-isOpen="false"></div>
+                                    <input type="text" class="form-control" id="search-bar" placeholder="Search">
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
     </nav>
     <div class="container">
         <div class="row" id="productList"></div>
     </div>
     <script type="module" src="script.js"></script>
+    <script>
+
+    </script>
+    </div>
+
 </body>
 
 </html>
